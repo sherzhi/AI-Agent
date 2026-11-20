@@ -1,8 +1,7 @@
 # 今天吃什麼：校園餐廳推薦 Agent（作業 2）
 
 用中文說「我吃素，朋友吃葷，想吃麵，100 元以內」，Agent 會把這句話轉成查詢條件，呼叫餐廳查詢工具，
-從 `data/restaurants.csv`（29 間三峽北大附近的餐廳）找出符合的店推薦給你。
-沒有給任何條件時，會把各類型有哪些店列出來讓你自己選。查不到就直說，不編餐廳。
+從 `data/restaurants.csv`（29 間三峽北大附近的餐廳）找出符合的店推薦。
 
 ## 資料夾
 
@@ -41,7 +40,7 @@ Containerfile       Podman 建置檔
 | `LLM_MODEL` | 模型名稱 | `qwen2.5:7b` |
 | `LLM_API_KEY` | 金鑰，不需要的話可以不設 | `sk-...` |
 
-`host.containers.internal` 是容器裡指到你電腦本機的位址（LLM 跑在你自己電腦上時用）。
+`host.containers.internal` 是容器裡指到電腦本機的位址。
 金鑰不要寫進程式碼，也不要上傳到 GitHub。
 
 ## 執行（Podman）
