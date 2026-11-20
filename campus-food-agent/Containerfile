@@ -1,0 +1,11 @@
+# 今天吃什麼：校園餐廳推薦 Agent
+# 建置：podman build -t campus-food-agent .
+FROM python:3.12-slim
+
+WORKDIR /app
+ENV PYTHONIOENCODING=utf-8 LANG=C.UTF-8
+COPY src/ ./src/
+COPY data/ ./data/
+
+# LLM 伺服器在容器外，位址、模型和金鑰在 podman run 時用環境變數傳入
+CMD ["python", "-m", "src.agent"]
